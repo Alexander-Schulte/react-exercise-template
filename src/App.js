@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
   const [message, setMessage] = useState("Hello React");
   // Your code below
+
+  useEffect(() => {
+    console.log("On first render");
+    setMessage("Hello NeueFische");
+  }, []);
 
   return (
     <div className="App">
